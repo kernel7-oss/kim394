@@ -5,7 +5,9 @@
     "status": "completed",
     "statusText": "Recibido e Incorporado",
     "description": "Código II-08-26, elaborado por el Perito Investigador de Incendios y Explosiones Matías Eduardo Friz (M.P. N°1118) el 30/07/2026.",
-    "date": "30/07/2026"
+    "date": "30/07/2026",
+    "docLink": "media/informe_pericial_kim394.pdf",
+    "docLabel": "Descargar Informe Pericial Completo (PDF)"
   },
   {
     "id": "defensa_consumidor",
