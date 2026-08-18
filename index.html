@@ -23,6 +23,27 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemPage",
+    "name": "KIM394 — Documentación y Reporte de Hechos del Siniestro",
+    "description": "Registro documental cronológico, informe pericial técnico y evidencia fáctica sobre el incendio total del automóvil Ford Fiesta Ambiente 2011 (KIM394) tras una intervención mecánica.",
+    "about": {
+      "@type": "Thing",
+      "name": "Siniestro Automotor Ford Fiesta KIM394",
+      "description": "Caso de mala praxis mecánica, sobrecalentamiento térmico e incendio en Comodoro Rivadavia, Chubut."
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Propietario del Vehículo KIM394"
+    },
+    "datePublished": "2026-08-04",
+    "inLanguage": "es"
+  }
+  </script>
 </head>
 <body>
 
@@ -86,6 +107,43 @@
     </div>
   </section>
 
+  <!-- Resumen Ejecutivo del Dossier -->
+  <section id="resumen-ejecutivo" class="executive-summary-section" style="padding: 2.25rem 0; background: var(--bg-surface); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div style="background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 12px; padding: 1.75rem; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+          <span style="background: var(--accent-orange); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Dossier Factual</span>
+          <h2 style="font-size: 1.25rem; font-weight: 600; margin: 0; color: var(--text-primary);">Ejes Clave del Expediente Probatorio</h2>
+        </div>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+          Este sitio constituye un registro público y verificable de acceso libre destinado a transparentar los hechos materiales, periciales y tributarios vinculados a la destrucción total del vehículo <strong>KIM394</strong> tras su paso por el taller.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;">
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 600; color: var(--accent-amber); margin-bottom: 0.35rem; font-size: 0.95rem;">1. Cronología Verificable</div>
+            <div style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.4;">8 hitos auditables con marcas temporales, chats de WhatsApp y registros fotográficos directos.</div>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 600; color: var(--accent-amber); margin-bottom: 0.35rem; font-size: 0.95rem;">2. Dictamen Pericial (M.P. 1118)</div>
+            <div style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.4;">Informe de 9 fojas elaborado por el Perito Investigador Matías Eduardo Friz determinando causa mecánica.</div>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 600; color: var(--accent-amber); margin-bottom: 0.35rem; font-size: 0.95rem;">3. Repuestos y Facturación</div>
+            <div style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.4;">Constancia de provisión de repuestos por el taller y discrepancia de $170.000 entre pago y factura.</div>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 600; color: var(--accent-amber); margin-bottom: 0.35rem; font-size: 0.95rem;">4. Contraste Antes vs. Después</div>
+            <div style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.4;">5 perspectivas comparativas del estado óptimo original frente a la calcinación total posterior.</div>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 600; color: var(--accent-amber); margin-bottom: 0.35rem; font-size: 0.95rem;">5. Estado de Reclamos</div>
+            <div style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.4;">Seguimiento en tiempo real de gestiones ante Defensa del Consumidor, ARCA y fuero judicial.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Timeline Section -->
   <section id="cronologia">
     <div class="container">
@@ -108,12 +166,16 @@
               <div class="timeline-detail">
                 El vehículo Ford Fiesta (KIM394) ingresa al taller "Lubricentro Oficial Service" (a cargo de Lucio Bottino) bajo turno acordado previamente, para resolver fallas en el ralentí del motor.
               </div>
-              <a href="#" class="timeline-evidence-link" data-media="media/local_taller_mecánico.png">
-                Ver fachada del taller 1 (local_taller_mecánico.png)
-              </a>
-              <a href="#" class="timeline-evidence-link" data-media="media/local_taller_mecánico2.png">
-                Ver fachada del taller 2 (local_taller_mecánico2.png)
-              </a>
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="#" class="timeline-evidence-link" data-media="media/local_taller_mecanico.png" data-title="Fachada del Taller (Vista 1)" data-desc="Fachada del Lubricentro Oficial Service / Bottijas Electromecánica donde ingresó el vehículo KIM394." data-date="14/07/2026" style="display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--accent-orange); font-size: 0.85rem; font-weight: 500; background: rgba(255,255,255,0.05); padding: 0.5rem 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); transition: all 0.2s ease;">
+                  <img src="media/local_taller_mecanico.png" alt="Fachada del taller mecánico 1" style="width: 48px; height: 48px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border-color);">
+                  <span>Fachada del Taller 1</span>
+                </a>
+                <a href="#" class="timeline-evidence-link" data-media="media/local_taller_mecanico2.png" data-title="Fachada del Taller (Vista 2)" data-desc="Segunda perspectiva de la fachada del taller mecánico involucrado en la intervención." data-date="14/07/2026" style="display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--accent-orange); font-size: 0.85rem; font-weight: 500; background: rgba(255,255,255,0.05); padding: 0.5rem 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); transition: all 0.2s ease;">
+                  <img src="media/local_taller_mecanico2.png" alt="Fachada del taller mecánico 2" style="width: 48px; height: 48px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border-color);">
+                  <span>Fachada del Taller 2</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
