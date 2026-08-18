@@ -40,13 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
           if (item.status === 'completed') badgeClass = 'completed';
           else if (item.status === 'in_progress') badgeClass = 'in_progress';
           
+          let docLinkHtml = '';
+          if (item.docLink) {
+            docLinkHtml = `
+              <div style="margin: 0.75rem 0 0.5rem 0;">
+                <a href="${item.docLink}" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                  </svg>
+                  ${item.docLabel || 'Ver Documento (PDF)'}
+                </a>
+              </div>
+            `;
+          }
+          
           card.innerHTML = `
             <div class="status-badge-container">
               <span class="status-badge ${badgeClass}">${item.statusText}</span>
             </div>
             <h3 class="status-card-title">${item.name}</h3>
             <p class="status-card-desc">${item.description}</p>
-            <div class="status-card-date">Actualizado: ${item.date}</div>
+            ${docLinkHtml}
+            <div class="status-card-date" style="margin-top: 0.5rem;">Actualizado: ${item.date}</div>
           `;
           statusContainer.appendChild(card);
         });
