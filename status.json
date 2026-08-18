@@ -23,7 +23,9 @@
     "status": "in_progress",
     "statusText": "En Curso / Bajo Investigación",
     "description": "Presentada ante el organismo fiscal por inconsistencias entre la factura FAC0004 ($290.000, declarada impaga) y el importe efectivamente transferido ($460.000).",
-    "date": "02/08/2026"
+    "date": "02/08/2026",
+    "docLink": "media/AFIP_F206_presentacion.pdf",
+    "docLabel": "Ver Presentación Multinota F. 206 (PDF)"
   },
   {
     "id": "reclamo_civil",
