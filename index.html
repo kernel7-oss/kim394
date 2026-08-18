@@ -1293,16 +1293,62 @@
               <p>Haga clic para abrir el mapa interactivo de Google Maps</p>
             </div>
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; padding: 0.5rem 0.25rem;">
-            <a href="https://maps.app.goo.gl/HfSQP3s3oMcpnGNQ7" class="btn btn-primary" target="_blank">
-              Abrir Mapa en Google Maps
-            </a>
-            <a href="https://www.instagram.com/bottijaselectromecanica" class="btn btn-secondary" target="_blank">
-              Instagram del mecánico
-            </a>
-            <a href="https://www.instagram.com/lubricentro.oficialservice/" class="btn btn-secondary" target="_blank">
-              Instagram del Lubricentro Oficial Service
-            </a>
+          <div style="padding: 1rem 0.5rem 0.5rem 0.5rem;">
+            <div style="margin-bottom: 1.25rem;">
+              <a href="https://maps.app.goo.gl/HfSQP3s3oMcpnGNQ7" class="btn btn-primary" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Abrir Ubicación en Google Maps
+              </a>
+            </div>
+
+            <!-- Co-Responsibility Instagram Query -->
+            <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 8px; padding: 1.25rem;">
+              <h4 style="color: var(--accent-amber); font-size: 0.95rem; margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                ¿Quién responde ante el siniestro cuando en redes sociales ambos tienen la misma dirección?
+              </h4>
+              <p style="font-size: 0.825rem; color: var(--text-secondary); line-height: 1.45; margin-bottom: 1rem;">
+                Tanto el perfil del mecánico (<strong>@bottijaselectromecanica</strong>) como el del establecimiento (<strong>@lubricentro.oficialservice</strong>) publicitan y prestan servicios en el mismo domicilio físico de <strong>Chile 891</strong>. Las capturas de redes sociales confirman la indivisibilidad operativa entre ambos:
+              </p>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1rem;">
+                <!-- Instagram Bottijas -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.6rem; cursor: pointer; transition: all 0.2s ease;" onclick="openLightbox('media/instagram_bottijas.png', 'Instagram: @bottijaselectromecanica', 'Captura de perfil en Instagram del mecánico Lucio Bottino fijando domicilio en Chile 891.', '18/08/2026', 'Redes Sociales', false)">
+                  <div style="font-size: 0.78rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>@bottijaselectromecanica</span>
+                    <span style="font-size: 0.7rem; color: var(--accent-orange);">Ver 🔍</span>
+                  </div>
+                  <img src="media/instagram_bottijas.png" alt="Perfil Instagram Bottijas Electromecánica" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border-color);">
+                  <div style="font-size: 0.72rem; color: var(--accent-amber); margin-top: 0.35rem;">Dirección: Chile 891</div>
+                </div>
+
+                <!-- Instagram Lubricentro -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.6rem; cursor: pointer; transition: all 0.2s ease;" onclick="openLightbox('media/instagram_lubricentro.png', 'Instagram: @lubricentro.oficialservice', 'Captura de perfil en Instagram de Lubricentro Oficial Service fijando domicilio en Chile 891.', '18/08/2026', 'Redes Sociales', false)">
+                  <div style="font-size: 0.78rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem; display: flex; justify-content: space-between; align-items: center;">
+                    <span>@lubricentro.oficialservice</span>
+                    <span style="font-size: 0.7rem; color: var(--accent-orange);">Ver 🔍</span>
+                  </div>
+                  <img src="media/instagram_lubricentro.png" alt="Perfil Instagram Lubricentro Oficial Service" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border-color);">
+                  <div style="font-size: 0.72rem; color: var(--accent-amber); margin-top: 0.35rem;">Dirección: Chile 891</div>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <a href="https://www.instagram.com/bottijaselectromecanica" class="btn btn-secondary btn-sm" target="_blank" style="font-size: 0.75rem;">
+                  Instagram del Mecánico
+                </a>
+                <a href="https://www.instagram.com/lubricentro.oficialservice/" class="btn btn-secondary btn-sm" target="_blank" style="font-size: 0.75rem;">
+                  Instagram del Lubricentro
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
