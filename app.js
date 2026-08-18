@@ -308,6 +308,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Connect 'Ver Fotos del Peritaje' button to trigger the perito lightbox gallery directly
+  const btnVerFotosPeritaje = document.getElementById('btn-ver-fotos-peritaje');
+  if (btnVerFotosPeritaje) {
+    btnVerFotosPeritaje.addEventListener('click', (e) => {
+      e.preventDefault();
+      const firstPeritoThumb = document.querySelector('.timeline-mini-gallery .timeline-gallery-thumb');
+      if (firstPeritoThumb) {
+        firstPeritoThumb.click();
+      } else {
+        openLightbox('media/peritaje_friz_1.png', 'Informe Pericial - Pág 1', 'Portada e identificación del informe pericial de Matías Eduardo Friz (M.P. N°1118).', '25/07/2026', 'Informe Pericial (Matías Friz)', false);
+      }
+    });
+  }
+
   // 5. YouTube Video Lazy Loading
   const videoWrappers = document.querySelectorAll('.video-player-wrapper');
   videoWrappers.forEach(wrapper => {
