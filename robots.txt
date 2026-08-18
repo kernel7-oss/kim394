@@ -1,0 +1,3 @@
+# Bloqueo total de indexación para resguardo de privacidad y uso como legajo privado
+User-agent: *
+Disallow: /
