@@ -1,0 +1,938 @@
+/* ==========================================================================
+   WhatsApp Chat Viewer — Stylesheet
+   Project: KIM394 Incendio
+   Reuses CSS variables defined in styles.css (:root)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. CHAT CONTAINER & BACKGROUND
+   ========================================================================== */
+
+.wa-chat-section {
+  padding: 2rem 0 4rem;
+}
+
+.wa-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.wa-chat-wrapper {
+  background-color: var(--bg-secondary);
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(var(--accent-amber-rgb), 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(var(--accent-blue-rgb), 0.03) 0%, transparent 50%);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.wa-chat-body {
+  position: relative;
+  padding: 1rem 1rem 2rem;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 15 L30 12 L25 15 Z' fill='%23ffffff' fill-opacity='0.012'/%3E%3Ccircle cx='10' cy='40' r='2' fill='%23ffffff' fill-opacity='0.01'/%3E%3Ccircle cx='50' cy='50' r='1.5' fill='%23ffffff' fill-opacity='0.01'/%3E%3C/svg%3E");
+  min-height: 200px;
+}
+
+
+/* ==========================================================================
+   2. CHAT HEADER / INFO
+   ========================================================================== */
+
+.wa-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.wa-chat-header-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.wa-chat-header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.wa-chat-header-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.wa-chat-header-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.wa-chat-header-stats {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.wa-chat-header-stat {
+  text-align: center;
+}
+
+.wa-chat-header-stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-amber);
+  line-height: 1.2;
+}
+
+.wa-chat-header-stat-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/* ==========================================================================
+   3. TOOLBAR (Search & Navigation)
+   ========================================================================== */
+
+.wa-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 64px; /* below main site header */
+  z-index: 90;
+}
+
+.wa-toolbar-search {
+  flex: 1;
+  position: relative;
+}
+
+.wa-toolbar-search input {
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.wa-toolbar-search input::placeholder {
+  color: var(--text-muted);
+}
+
+.wa-toolbar-search input:focus {
+  border-color: var(--accent-amber);
+}
+
+.wa-toolbar-search-icon {
+  position: absolute;
+  left: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.wa-toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.wa-toolbar-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.wa-toolbar-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.wa-toolbar-counter {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  min-width: 3.5rem;
+  text-align: center;
+}
+
+
+/* ==========================================================================
+   4. DATE SEPARATORS
+   ========================================================================== */
+
+.wa-date-separator {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0.75rem;
+}
+
+.wa-date-pill {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-sm);
+  user-select: none;
+}
+
+
+/* ==========================================================================
+   5. SYSTEM MESSAGES
+   ========================================================================== */
+
+.wa-system-message {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+
+/* ==========================================================================
+   6. MESSAGE BUBBLES
+   ========================================================================== */
+
+.wa-message-row {
+  display: flex;
+  margin-bottom: 0.35rem;
+  animation: waFadeIn 0.3s ease-out both;
+}
+
+.wa-message-row.incoming {
+  justify-content: flex-start;
+}
+
+.wa-message-row.outgoing {
+  justify-content: flex-end;
+}
+
+.wa-bubble {
+  position: relative;
+  max-width: 75%;
+  padding: 0.5rem 0.65rem 1.35rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Incoming – Lucio Bottino */
+.wa-bubble.incoming {
+  background: rgba(30, 41, 59, 0.85);
+  border-left: 3px solid var(--accent-amber);
+  border-top-left-radius: 3px;
+}
+
+/* Outgoing – Darío (D@S) */
+.wa-bubble.outgoing {
+  background: rgba(22, 78, 99, 0.6);
+  border-right: 3px solid var(--accent-blue);
+  border-top-right-radius: 3px;
+}
+
+/* Sender name */
+.wa-sender {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  line-height: 1.2;
+}
+
+.wa-sender.incoming {
+  color: var(--accent-amber);
+}
+
+.wa-sender.outgoing {
+  color: var(--accent-blue);
+}
+
+/* Message text */
+.wa-bubble-text {
+  white-space: pre-wrap;
+}
+
+/* Timestamp */
+.wa-time {
+  position: absolute;
+  bottom: 0.3rem;
+  right: 0.6rem;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   7. IMAGES
+   ========================================================================== */
+
+.wa-image {
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  margin: 0.25rem 0;
+}
+
+.wa-image:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+
+/* ==========================================================================
+   8. VIDEO
+   ========================================================================== */
+
+.wa-video {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0.25rem 0;
+  cursor: pointer;
+  background: #000;
+}
+
+.wa-video video,
+.wa-video img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.wa-video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background var(--transition-fast);
+  border-radius: 6px;
+}
+
+.wa-video:hover .wa-video-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.wa-video-play-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(var(--accent-green-rgb), 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+  box-shadow: var(--shadow-md);
+}
+
+.wa-video:hover .wa-video-play-btn {
+  transform: scale(1.1);
+  background: rgba(var(--accent-green-rgb), 1);
+}
+
+.wa-video-play-btn::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 15px solid #fff;
+}
+
+
+/* ==========================================================================
+   9. AUDIO PLAYER
+   ========================================================================== */
+
+.wa-audio-player {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  min-width: 220px;
+}
+
+.wa-audio-play-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent-green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  font-size: 1rem;
+}
+
+.wa-audio-play-btn:hover {
+  background: #0ea572;
+  transform: scale(1.08);
+}
+
+.wa-audio-progress-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.wa-audio-progress {
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bg-tertiary);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.wa-audio-progress::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bg-tertiary);
+}
+
+.wa-audio-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  margin-top: -4px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.wa-audio-progress::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  border: none;
+  cursor: pointer;
+}
+
+.wa-audio-progress::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bg-tertiary);
+}
+
+.wa-audio-duration {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   10. DOCUMENT / PDF CARDS
+   ========================================================================== */
+
+.wa-document {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin: 0.25rem 0;
+  transition: background var(--transition-fast);
+}
+
+.wa-document:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.wa-document-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: rgba(var(--accent-red-rgb), 0.15);
+  color: var(--accent-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.wa-document-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.wa-document-name {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wa-document-meta {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.wa-document-open {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent-blue);
+  border: 1px solid rgba(var(--accent-blue-rgb), 0.3);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.wa-document-open:hover {
+  background: rgba(var(--accent-blue-rgb), 0.12);
+  border-color: rgba(var(--accent-blue-rgb), 0.5);
+}
+
+
+/* ==========================================================================
+   11. STICKERS
+   ========================================================================== */
+
+.wa-sticker {
+  max-width: 180px;
+  margin: 0.25rem 0;
+}
+
+.wa-sticker img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Override bubble background for sticker messages */
+.wa-bubble.wa-sticker-bubble {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0.25rem;
+}
+
+
+/* ==========================================================================
+   12. SEARCH HIGHLIGHT
+   ========================================================================== */
+
+.wa-highlight {
+  background: rgba(var(--accent-amber-rgb), 0.35);
+  color: var(--text-primary);
+  border-radius: 2px;
+  padding: 0 2px;
+  outline: 1px solid rgba(var(--accent-amber-rgb), 0.5);
+}
+
+.wa-highlight.active {
+  background: rgba(var(--accent-amber-rgb), 0.6);
+  outline-width: 2px;
+}
+
+
+/* ==========================================================================
+   13. PRESERVATION BANNER
+   ========================================================================== */
+
+.wa-preservation-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1.15rem;
+  background: rgba(var(--accent-blue-rgb), 0.07);
+  border: 1px solid rgba(var(--accent-blue-rgb), 0.2);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.wa-preservation-banner-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  color: var(--accent-blue);
+}
+
+.wa-preservation-banner strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+
+/* ==========================================================================
+   14. LIGHTBOX
+   ========================================================================== */
+
+.wa-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.wa-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wa-lightbox img {
+  max-width: 92vw;
+  max-height: 90vh;
+  border-radius: 6px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  transform: scale(0.92);
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.wa-lightbox.active img {
+  transform: scale(1);
+}
+
+.wa-lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.wa-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.wa-lightbox-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  text-align: center;
+  max-width: 80%;
+  padding: 0.4rem 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+}
+
+
+/* ==========================================================================
+   15. SCROLLBAR (Chat body)
+   ========================================================================== */
+
+.wa-chat-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.wa-chat-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wa-chat-body::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+.wa-chat-body::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+
+/* ==========================================================================
+   16. ANIMATIONS
+   ========================================================================== */
+
+@keyframes waFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered delay utility (applied via JS or nth-child) */
+.wa-message-row:nth-child(2)  { animation-delay: 0.03s; }
+.wa-message-row:nth-child(3)  { animation-delay: 0.06s; }
+.wa-message-row:nth-child(4)  { animation-delay: 0.09s; }
+.wa-message-row:nth-child(5)  { animation-delay: 0.12s; }
+
+
+/* ==========================================================================
+   17. RESPONSIVE — Tablet (≤ 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .wa-container {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .wa-chat-wrapper {
+    border-radius: 8px;
+  }
+
+  .wa-bubble {
+    max-width: 85%;
+    font-size: 0.87rem;
+  }
+
+  .wa-chat-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .wa-chat-header-stats {
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .wa-toolbar {
+    top: 56px;
+  }
+
+  .wa-lightbox img {
+    max-width: 96vw;
+    max-height: 85vh;
+  }
+}
+
+
+/* ==========================================================================
+   18. RESPONSIVE — Mobile (≤ 480px)
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  .wa-chat-section {
+    padding: 1rem 0 2rem;
+  }
+
+  .wa-container {
+    padding: 0 0.25rem;
+  }
+
+  .wa-chat-wrapper {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .wa-chat-body {
+    padding: 0.75rem 0.5rem 1.5rem;
+  }
+
+  .wa-bubble {
+    max-width: 90%;
+    padding: 0.4rem 0.55rem 1.2rem;
+    font-size: 0.84rem;
+    border-radius: 8px;
+  }
+
+  .wa-bubble.incoming {
+    border-left-width: 2px;
+    border-top-left-radius: 2px;
+  }
+
+  .wa-bubble.outgoing {
+    border-right-width: 2px;
+    border-top-right-radius: 2px;
+  }
+
+  .wa-sender {
+    font-size: 0.7rem;
+  }
+
+  .wa-time {
+    font-size: 0.6rem;
+  }
+
+  .wa-date-pill {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.7rem;
+  }
+
+  .wa-audio-player {
+    min-width: 180px;
+  }
+
+  .wa-audio-play-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .wa-toolbar {
+    top: 48px;
+    gap: 0.35rem;
+    padding: 0.5rem 0.65rem;
+  }
+
+  .wa-toolbar-search input {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem 0.4rem 2rem;
+  }
+
+  .wa-toolbar-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .wa-chat-header {
+    padding: 0.75rem;
+  }
+
+  .wa-chat-header-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .wa-chat-header-title {
+    font-size: 0.9rem;
+  }
+
+  .wa-chat-header-subtitle {
+    font-size: 0.72rem;
+  }
+
+  .wa-sticker {
+    max-width: 140px;
+  }
+
+  .wa-preservation-banner {
+    font-size: 0.78rem;
+    padding: 0.7rem 0.85rem;
+  }
+
+  .wa-lightbox-close {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* ==========================================================================
+   19. PRINT
+   ========================================================================== */
+
+@media print {
+  .wa-toolbar,
+  .wa-lightbox {
+    display: none !important;
+  }
+
+  .wa-chat-wrapper {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .wa-bubble {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}

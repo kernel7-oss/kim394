@@ -1,0 +1,105 @@
+═══════════════════════════════════════════════════════════════
+ ÍNDICE DOCUMENTAL — CONVERSACIÓN WHATSAPP
+ Expediente KIM394 — Ford Fiesta Ambiente 2011 (Dominio KIM394)
+═══════════════════════════════════════════════════════════════
+
+METADATOS DEL BACKUP
+────────────────────
+Archivo fuente:      WhatsApp Chat - Lucio Mecanico Bottino.zip
+Tamaño del ZIP:      7,546,743 bytes (7.2 MB)
+SHA-256 del ZIP:     c2b30d8d646d9b09308c51a0e807391b692169bcb30144cc075b29907fcc2241
+Fecha de generación: 23 de agosto de 2026
+Estado:              Intacto / Sin modificaciones
+
+PERÍODO DE LA CONVERSACIÓN
+──────────────────────────
+Fecha de inicio:     7 de julio de 2026, 18:12 hs
+Fecha de cierre:     15 de julio de 2026, 09:52 hs
+Duración:            8 días naturales
+
+PARTICIPANTES
+─────────────
+1. ~Lucio Bottino     (Mecánico / Prestador del servicio)     — 55 mensajes
+2. D@S                (Sebastián Darío Aybar / Propietario)   — 34 mensajes
+   Total de mensajes con marca temporal: 89
+
+RESUMEN DE ARCHIVOS MULTIMEDIA
+──────────────────────────────
+Tipo          Cantidad    Tamaño Total     Formato Original
+──────────    ────────    ────────────     ────────────────
+Audios           14         900 KB         OPUS
+Imágenes         12        1.77 MB         JPG
+Videos            2        4.53 MB         MOV (Apple QuickTime)
+Documentos        2          69 KB         PDF
+Stickers          1          27 KB         WEBP
+──────────    ────────    ────────────
+TOTAL            31        7.29 MB
+
+ARCHIVOS DERIVADOS PARA COMPATIBILIDAD WEB
+───────────────────────────────────────────
+Los siguientes archivos fueron generados como COPIAS DERIVADAS
+exclusivamente para permitir la reproducción en navegadores web.
+Los archivos originales se conservan intactos en la carpeta
+media/whatsapp/originales/.
+
+Archivo Original (MOV)                          → Derivado Web (MP4)
+──────────────────────────────────────────────────────────────────────
+00000067-VIDEO-2026-07-15-09-30-25.mov          → media/whatsapp/web/00000067-VIDEO-2026-07-15-09-30-25.mp4
+00000068-VIDEO-2026-07-15-09-30-25.mov          → media/whatsapp/web/00000068-VIDEO-2026-07-15-09-30-25.mp4
+
+CORRESPONDENCIA MENSAJE → ARCHIVO
+──────────────────────────────────
+#   Fecha/Hora              Remitente           Archivo                                                  Tipo
+──  ──────────────────────  ──────────────────  ─────────────────────────────────────────────────────── ────────
+1   14/07/2026 11:15        D@S                 00000008-AUDIO-2026-07-14-11-15-50.opus                  Audio
+2   14/07/2026 11:17        D@S                 00000009-AUDIO-2026-07-14-11-17-42.opus                  Audio
+3   14/07/2026 12:29        Lucio Bottino       00000014-PHOTO-2026-07-14-12-29-04.jpg                   Imagen
+4   14/07/2026 12:29        Lucio Bottino       00000015-PHOTO-2026-07-14-12-29-04.jpg                   Imagen
+5   14/07/2026 12:30        Lucio Bottino       00000018-AUDIO-2026-07-14-12-30-21.opus                  Audio
+6   14/07/2026 12:30        D@S                 00000019-AUDIO-2026-07-14-12-30-25.opus                  Audio
+7   14/07/2026 12:30        Lucio Bottino       00000020-AUDIO-2026-07-14-12-30-36.opus                  Audio
+8   14/07/2026 12:31        Lucio Bottino       00000021-AUDIO-2026-07-14-12-31-21.opus                  Audio
+9   14/07/2026 12:31        D@S                 00000022-AUDIO-2026-07-14-12-31-34.opus                  Audio
+10  14/07/2026 12:32        Lucio Bottino       00000023-AUDIO-2026-07-14-12-32-05.opus                  Audio
+11  14/07/2026 12:33        D@S                 00000024-AUDIO-2026-07-14-12-33-09.opus                  Audio
+12  14/07/2026 12:34        Lucio Bottino       00000025-AUDIO-2026-07-14-12-34-13.opus                  Audio
+13  14/07/2026 14:09        Lucio Bottino       00000028-PHOTO-2026-07-14-14-09-38.jpg                   Imagen
+14  14/07/2026 14:10        Lucio Bottino       00000030-PHOTO-2026-07-14-14-10-10.jpg                   Imagen
+15  14/07/2026 14:54        Lucio Bottino       00000040-AUDIO-2026-07-14-14-54-13.opus                  Audio
+16  14/07/2026 14:57        D@S                 00000043-STICKER-2026-07-14-14-57-50.webp                Sticker
+17  14/07/2026 17:56        Lucio Bottino       00000044-PHOTO-2026-07-14-17-56-47.jpg                   Imagen
+18  14/07/2026 17:58        Lucio Bottino       00000049-FAC0004.pdf                                     Documento
+19  14/07/2026 18:02        D@S                 00000062-COMP_HB3_TRANSFERENCIA-242087851-20260714180152.pdf  Documento
+20  15/07/2026 09:30        D@S                 00000065-AUDIO-2026-07-15-09-30-10.opus                  Audio
+21  15/07/2026 09:30        D@S                 00000067-VIDEO-2026-07-15-09-30-25.mov                   Video
+22  15/07/2026 09:30        D@S                 00000068-VIDEO-2026-07-15-09-30-25.mov                   Video
+23  15/07/2026 09:30        D@S                 00000069-PHOTO-2026-07-15-09-30-25.jpg                   Imagen
+24  15/07/2026 09:30        D@S                 00000070-PHOTO-2026-07-15-09-30-25.jpg                   Imagen
+25  15/07/2026 09:30        D@S                 00000071-PHOTO-2026-07-15-09-30-25.jpg                   Imagen
+26  15/07/2026 09:30        D@S                 00000072-PHOTO-2026-07-15-09-30-25.jpg                   Imagen
+27  15/07/2026 09:30        D@S                 00000073-PHOTO-2026-07-15-09-30-25.jpg                   Imagen
+28  15/07/2026 09:30        D@S                 00000074-PHOTO-2026-07-15-09-30-25.jpg                   Imagen
+29  15/07/2026 09:43        D@S                 00000080-AUDIO-2026-07-15-09-43-58.opus                  Audio
+30  15/07/2026 09:51        D@S                 00000087-AUDIO-2026-07-15-09-51-09.opus                  Audio
+
+VERIFICACIÓN DE INTEGRIDAD
+──────────────────────────
+- Archivos multimedia referenciados en _chat.txt:  30
+- Archivos multimedia presentes en el backup:      30
+- Archivos huérfanos (sin referencia en el chat):   0
+- Archivos faltantes (referenciados sin archivo):   0
+- Estado de correspondencia: COMPLETA (30/30) ✓
+
+NOTA DE PRESERVACIÓN
+────────────────────
+Los archivos originales del backup de WhatsApp se conservan sin
+modificación alguna en la carpeta media/whatsapp/originales/.
+Las versiones .mp4 ubicadas en media/whatsapp/web/ son copias
+derivadas generadas exclusivamente para compatibilidad con
+navegadores web (conversión de MOV a MP4 mediante ffmpeg).
+Los hashes SHA-256 de todos los archivos originales se encuentran
+registrados en el archivo evidencia/HASH_SHA256.txt.
+
+═══════════════════════════════════════════════════════════════
+ FIN DEL ÍNDICE DOCUMENTAL
+═══════════════════════════════════════════════════════════════

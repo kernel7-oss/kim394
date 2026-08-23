@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIM394 — Conversación Completa de WhatsApp</title>
+
+  <!-- Directivas de Privacidad y Bloqueo de Indexación -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+
+  <!-- SEO & Technical Meta Tags -->
+  <meta name="description" content="Reproducción documental cronológica de la conversación de WhatsApp con el taller mecánico involucrado en el siniestro del Ford Fiesta KIM394.">
+  <meta name="author" content="Propietario del Vehículo">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="whatsapp.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        KIM394<span>_REGISTRO</span>
+        <span class="badge">FORD FIESTA 2011</span>
+      </a>
+      <nav id="main-nav">
+        <a href="index.html#cronologia">Cronología</a>
+        <a href="index.html#facturacion">Factura vs Pago</a>
+        <a href="index.html#peritaje">Informe Pericial</a>
+        <a href="index.html#contraste">Antes vs Después</a>
+        <a href="index.html#galeria">Evidencia</a>
+        <a href="index.html#taller">El Taller</a>
+        <a href="index.html#reclamo">Estado</a>
+        <a href="whatsapp.html" class="active" style="color: var(--accent-amber); font-weight: 700;">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main class="wa-chat-section">
+    <div class="container wa-container">
+
+      <!-- Breadcrumb & Header Info -->
+      <div style="margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">
+          <a href="index.html" style="color: var(--accent-blue); text-decoration: none;">← Volver al Expediente Principal</a>
+          <span>/</span>
+          <span>Dossier Documental</span>
+        </div>
+        <h1 style="font-size: 1.75rem; font-weight: 700; color: var(--text-primary); margin: 0 0 0.5rem 0;">
+          Conversación Completa de WhatsApp
+        </h1>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+          Reproducción documental fáctica y cronológica de las comunicaciones cursadas entre el propietario y el mecánico Lucio Bottino, incluyendo audios, fotografías, videos de fallas y comprobantes de pago.
+        </p>
+      </div>
+
+      <!-- Preservation Banner -->
+      <div class="wa-preservation-banner">
+        <div class="wa-preservation-banner-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <div>
+          <strong>Preservación de la Evidencia Digital:</strong> 
+          Esta visualización reproduce la conversación íntegra contenida en la exportación oficial de WhatsApp proporcionada para este expediente (SHA-256 ZIP: <code style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-amber);">c2b30d8d...</code>). Los 31 archivos multimedia originales se conservan separadamente sin alteración. Las versiones de video reproducidas en el navegador son copias derivadas exclusivamente para compatibilidad web.
+        </div>
+      </div>
+
+      <!-- Chat Container -->
+      <div class="wa-chat-wrapper">
+        
+        <!-- Chat Header -->
+        <div class="wa-chat-header">
+          <div class="wa-chat-header-avatar">🔧</div>
+          <div class="wa-chat-header-info">
+            <div class="wa-chat-header-title">Lucio Bottino &amp; D@S</div>
+            <div class="wa-chat-header-subtitle">Lubricentro Oficial Service / Bottijas Electromecánica • Chile 891</div>
+          </div>
+          <div class="wa-chat-header-stats">
+            <div class="wa-chat-header-stat">
+              <div class="wa-chat-header-stat-value" id="wa-stat-messages">--</div>
+              <div class="wa-chat-header-stat-label">Mensajes</div>
+            </div>
+            <div class="wa-chat-header-stat">
+              <div class="wa-chat-header-stat-value" id="wa-stat-audios">--</div>
+              <div class="wa-chat-header-stat-label">Audios</div>
+            </div>
+            <div class="wa-chat-header-stat">
+              <div class="wa-chat-header-stat-value" id="wa-stat-media">--</div>
+              <div class="wa-chat-header-stat-label">Adjuntos</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Toolbar -->
+        <div class="wa-toolbar">
+          <div class="wa-toolbar-search">
+            <span class="wa-toolbar-search-icon">🔍</span>
+            <input type="text" id="wa-search-input" placeholder="Buscar en la conversación (ej: sonda, IAC, 460, catalizador)..." aria-label="Buscar en el chat">
+          </div>
+          <span class="wa-toolbar-counter" id="wa-search-counter"></span>
+          <button class="wa-toolbar-btn" id="wa-search-prev" title="Resultado anterior" disabled aria-label="Anterior">▲</button>
+          <button class="wa-toolbar-btn" id="wa-search-next" title="Resultado siguiente" disabled aria-label="Siguiente">▼</button>
+          <button class="wa-toolbar-btn" id="wa-search-clear" title="Limpiar búsqueda" aria-label="Limpiar">✕</button>
+          <select id="wa-date-select" class="wa-toolbar-btn" style="width: auto; padding: 0 0.5rem; font-size: 0.78rem;" aria-label="Saltar a fecha">
+            <option value="">📅 Fecha...</option>
+          </select>
+          <button class="wa-toolbar-btn" id="wa-go-top" title="Ir al inicio" aria-label="Ir al inicio">⬆</button>
+          <button class="wa-toolbar-btn" id="wa-go-bottom" title="Ir al final" aria-label="Ir al final">⬇</button>
+        </div>
+
+        <!-- Chat Body (Messages rendered by JS) -->
+        <div class="wa-chat-body" id="wa-chat-body">
+          <div style="text-align: center; padding: 3rem; color: var(--text-muted);">
+            Cargando mensajes del expediente...
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Documentary Integrity & Evidence Section -->
+      <div style="margin-top: 2rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem;">
+        <h3 style="font-size: 1.1rem; color: var(--accent-amber); margin: 0 0 0.75rem 0; display: flex; align-items: center; gap: 0.5rem;">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Registros de Integridad y Cadena de Custodia
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+          Para auditoría pericial, judicial o técnica, se encuentran a disposición los registros de correspondencia y hashes criptográficos de cada uno de los archivos extraídos del paquete original:
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+          <a href="evidencia/INDICE_WHATSAPP.txt" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            Ver Índice Documental (TXT)
+          </a>
+          <a href="evidencia/HASH_SHA256.txt" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+            </svg>
+            Ver Hashes SHA-256 (TXT)
+          </a>
+          <a href="index.html" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            Volver al Inicio del Sitio
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 class="footer-disclaimer-title">Aviso Documental y Marco Legal</h4>
+          <p class="footer-disclaimer-text" style="margin-bottom: 0.75rem;">
+            Este sitio web ha sido estructurado como un repositorio de respaldo probatorio y cronológico con fines de consulta técnica e informativa respecto al siniestro que afectó al vehículo Ford Fiesta Ambiente 2011 (Dominio KIM394).
+          </p>
+          <p class="footer-disclaimer-text" style="margin-bottom: 0.75rem;">
+            La información aquí expuesta se fundamenta en elementos materiales directos (registros fotográficos, comprobantes bancarios de transferencias y comunicaciones electrónicas cursadas) y en el dictamen técnico elaborado por Perito Investigador matriculado.
+          </p>
+          <p class="footer-disclaimer-text">
+            Se deja constancia de que los antecedentes recopilados reflejan el estado fáctico y documental de los hechos a la fecha, no constituyen una sentencia judicial ni resolución administrativa firme, y las actuaciones y reclamos pertinentes continúan su curso en las instancias correspondientes.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-contact-title">Contacto de Comunicación</h4>
+          <p style="margin-bottom: 1rem; color: var(--text-secondary);">Para solicitudes de información técnica:</p>
+          <ul class="footer-contact-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <a href="mailto:oreo.rosas-8f@icloud.com">oreo.rosas-8f@icloud.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 KIM394 Registro de Siniestro. Todos los derechos reservados.</span>
+        <span>Comodoro Rivadavia, Chubut, Argentina.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal Container for WhatsApp Images -->
+  <div class="wa-lightbox" id="wa-lightbox" aria-hidden="true">
+    <div class="wa-lightbox-backdrop"></div>
+    <button class="wa-lightbox-close" aria-label="Cerrar visor">&times;</button>
+    <div class="wa-lightbox-content">
+      <img class="wa-lightbox-img" src="" alt="Fotografía ampliada">
+      <div class="wa-lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="whatsapp-data.js"></script>
+  <script src="whatsapp.js"></script>
+</body>
+</html>
