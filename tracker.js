@@ -7,7 +7,7 @@
   'use strict';
 
   // ─── Configuración ──────────────────────────────────────────
-  const GOOGLE_SHEETS_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzRIUIXFCOM-dntI5eS-qwbDqS7-jxYwhYfcmBOQRToHGL86LR52iD08R3emA-a9N3ZRQ/exec';
+  const GOOGLE_SHEETS_WEBHOOK = 'https://script.google.com/macros/s/AKfycbyPpXQe9pkAFDjVT30-XOzy__sXgIQWU2npSkp2Yf01JCtiKXg6oQrtyHycZA-uTUCX/exec';
   
   // Credenciales de Telegram
   const TELEGRAM_BOT_TOKEN = '8823324058:AAFJq0l22ehzjFkqSXi9yXjuusAwPwO3qUk';
