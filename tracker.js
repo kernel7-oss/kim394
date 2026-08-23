@@ -43,12 +43,18 @@
   function sendToGoogleSheets(data) {
     if (!GOOGLE_SHEETS_WEBHOOK) return;
     try {
-      fetch(GOOGLE_SHEETS_WEBHOOK, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain' },
-        body: JSON.stringify(data)
-      }).catch(err => console.debug('Log status:', err));
+      const params = new URLSearchParams({
+        fecha: data.fecha || '',
+        pagina: data.pagina || '',
+        ip: data.ip || '',
+        ciudad: data.ciudad || '',
+        region: data.region || '',
+        pais: data.pais || '',
+        isp: data.isp || '',
+        user_agent: data.user_agent || ''
+      });
+      const url = GOOGLE_SHEETS_WEBHOOK + '?' + params.toString();
+      fetch(url, { method: 'GET', mode: 'no-cors' }).catch(() => {});
     } catch (e) {
       // Silencioso
     }
