@@ -9,9 +9,9 @@
   // ─── Configuración ──────────────────────────────────────────
   const GOOGLE_SHEETS_WEBHOOK = 'https://script.google.com/macros/s/AKfycbyPxF8gWmb8iuqs6ethXV-XiM0ygbV6SvYY3fVhLfWwssnAZYdquFTJlB3OLj2LRASV/exec';
   
-  // Puedes colocar aquí tu token y chat_id de Telegram cuando los tengas:
-  const TELEGRAM_BOT_TOKEN = ''; // ej: '7123456789:AAH...'
-  const TELEGRAM_CHAT_ID   = ''; // ej: '123456789'
+  // Credenciales de Telegram
+  const TELEGRAM_BOT_TOKEN = '8823324058:AAFJq0l22ehzjFkqSXi9yXjuusAwPwO3qUk';
+  const TELEGRAM_CHAT_ID   = '981503051';
 
   // ─── Identificación de Página ───────────────────────────────
   const pagePath = window.location.pathname.split('/').pop() || 'index.html';
