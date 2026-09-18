@@ -6,18 +6,34 @@
     "statusText": "Recibido e Incorporado",
     "description": "Código II-08-26, elaborado por el Perito Investigador de Incendios y Explosiones Matías Eduardo Friz (M.P. N°1118) el 30/07/2026.",
     "date": "30/07/2026",
-    "docLink": "media/informe_pericial_kim394.pdf",
-    "docLabel": "Descargar Informe Pericial Completo (PDF)"
+    "docs": [
+      {
+        "label": "Descargar Informe Pericial Completo (PDF)",
+        "link": "media/informe_pericial_kim394.pdf",
+        "isImage": false
+      }
+    ]
   },
   {
     "id": "defensa_consumidor",
-    "name": "Denuncia ante Defensa del Consumidor",
+    "name": "Defensa del Consumidor (Expte. N° 757/2026)",
     "status": "in_progress",
-    "statusText": "En Trámite de Presentación",
-    "description": "Se remitió la documentación correspondiente al organismo, contra el taller, por cobro indebido mediante una factura sin validez fiscal y por la falla del motor posterior a su intervención. A la fecha, el expediente no fue formalmente abierto: el organismo condicionó su apertura a la previa presentación del informe del perito investigador de incendios, requisito que no surge del artículo 45 de la Ley 24.240, el cual establece que la autoridad de aplicación debe iniciar actuaciones administrativas con la sola presentación de la denuncia, dejando constancia del hecho denunciado, sin supeditar su inicio a la previa acreditación pericial de los hechos.",
-    "date": "05/08/2026",
-    "docLink": "media/Defensa_al_consumidor_CR_presentacion.pdf",
-    "docLabel": "Ver Formulario de Reclamo (PDF)"
+    "statusText": "Audiencia Celebrada — En Trámite",
+    "description": "Expediente N° 757/2026 caratulado 'AYBAR SEBASTIAN DARIO C/ BOTTIJAS ELECTROMECANICA S/ Reclamo'. El 02/09/2026 a las 12:00 hs se llevó a cabo la audiencia en la Oficina de Defensa del Consumidor (Sarmiento 975, Comodoro Rivadavia) con la presencia del reclamante y del Sr. Lucio Bottino (con patrocinio letrado). En el acto, el taller desconoció las fotografías e impugnó el peritaje; el Sr. Aybar ratificó formalmente el reclamo en todas sus partes para continuar con el procedimiento administrativo.",
+    "date": "02/09/2026",
+    "thumbnail": "media/acta_defensa_consumidor_02_09_2026.jpg",
+    "docs": [
+      {
+        "label": "Ver Acta Oficial de Audiencia (02/09/2026)",
+        "link": "media/acta_defensa_consumidor_02_09_2026.jpg",
+        "isImage": true
+      },
+      {
+        "label": "Ver Formulario de Denuncia Inicial (PDF)",
+        "link": "media/Defensa_al_consumidor_CR_presentacion.pdf",
+        "isImage": false
+      }
+    ]
   },
   {
     "id": "arca",
@@ -26,15 +42,20 @@
     "statusText": "En Curso / Bajo Investigación",
     "description": "Presentada ante el organismo fiscal por inconsistencias entre la factura FAC0004 ($290.000, declarada impaga) y el importe efectivamente transferido ($460.000).",
     "date": "02/08/2026",
-    "docLink": "media/AFIP_F206_presentacion.pdf",
-    "docLabel": "Ver Presentación Multinota F. 206 (PDF)"
+    "docs": [
+      {
+        "label": "Ver Presentación Multinota F. 206 (PDF)",
+        "link": "media/AFIP_F206_presentacion.pdf",
+        "isImage": false
+      }
+    ]
   },
   {
     "id": "reclamo_civil",
     "name": "Demanda Civil por Daños y Perjuicios",
     "status": "pending",
     "statusText": "En Preparación",
-    "description": "Recopilación de pruebas fácticas y periciales en preparación para el inicio de la demanda judicial.",
+    "description": "Recopilación de pruebas fácticas, periciales y actas administrativas en preparación para el inicio de la demanda judicial indemnizatoria.",
     "date": "En desarrollo"
   }
 ]

@@ -40,8 +40,52 @@ document.addEventListener('DOMContentLoaded', () => {
           if (item.status === 'completed') badgeClass = 'completed';
           else if (item.status === 'in_progress') badgeClass = 'in_progress';
           
+          let thumbnailHtml = '';
+          if (item.thumbnail) {
+            const escapedDesc = (item.description || '').replace(/'/g, "\\'");
+            thumbnailHtml = `
+              <div class="status-thumbnail-wrap" style="margin: 0.75rem 0 0.5rem 0; cursor: pointer; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); position: relative; background: #0b0f19;" onclick="openLightbox('${item.thumbnail}', '${item.name}', '${escapedDesc}', '${item.date}', 'Oficina de Defensa del Consumidor', false)">
+                <img src="${item.thumbnail}" alt="${item.name}" loading="lazy" style="width: 100%; max-height: 180px; object-fit: cover; object-position: top; display: block; opacity: 0.92; transition: opacity var(--transition-fast), transform var(--transition-fast);">
+                <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(11, 15, 25, 0.85); border: 1px solid var(--border-color); color: #fff; font-size: 0.72rem; padding: 4px 8px; border-radius: 4px; display: flex; align-items: center; gap: 4px; backdrop-filter: blur(4px);">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                  Ampliar Acta (Foto)
+                </div>
+              </div>
+            `;
+          }
+
           let docLinkHtml = '';
-          if (item.docLink) {
+          if (item.docs && Array.isArray(item.docs)) {
+            docLinkHtml = '<div style="display: flex; flex-direction: column; gap: 0.4rem; margin: 0.75rem 0 0.5rem 0;">';
+            item.docs.forEach(doc => {
+              if (doc.isImage) {
+                const escapedDesc = (item.description || '').replace(/'/g, "\\'");
+                docLinkHtml += `
+                  <a href="#" onclick="event.preventDefault(); openLightbox('${doc.link}', '${item.name}', '${escapedDesc}', '${item.date}', 'Oficina de Defensa del Consumidor', false);" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                    ${doc.label}
+                  </a>
+                `;
+              } else {
+                docLinkHtml += `
+                  <a href="${doc.link}" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                    ${doc.label}
+                  </a>
+                `;
+              }
+            });
+            docLinkHtml += '</div>';
+          } else if (item.docLink) {
             docLinkHtml = `
               <div style="margin: 0.75rem 0 0.5rem 0;">
                 <a href="${item.docLink}" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none;">
@@ -61,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <h3 class="status-card-title">${item.name}</h3>
             <p class="status-card-desc">${item.description}</p>
+            ${thumbnailHtml}
             ${docLinkHtml}
             <div class="status-card-date" style="margin-top: 0.5rem;">Actualizado: ${item.date}</div>
           `;
